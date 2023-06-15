@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  function isPrime(number){
+    if (number > 10000 ) {
+      return false;
+    } else if (number === 2){
+      return true;
+    }else if(number > 2){
+      for (let i = 2; i < number; i++) {
+        if(number % i === 0){
+          return false;
+        }
+      }
+      return true;
+    }else {
+      return false;
+    }
+  }
+
+  for (let i = 0; i < 3; i++) {
+    var num = +prompt("type here");
+    alert(isPrime(num));
+  }
+</script>
+</body>
+</html>
